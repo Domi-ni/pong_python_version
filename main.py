@@ -18,7 +18,7 @@ if right_racket.ycor() > 280:
     pass
 else:
     my_screen.onkeypress(key="Up", fun=right_racket.up)
-    
+
 if right_racket.ycor() < -280:
     pass
 else:
