@@ -6,21 +6,19 @@ class Racket(Turtle):
         super().__init__()
         self.shape("square")
         self.color("white")
-        self.shapesize(stretch_len=3, stretch_wid=0.5)
-        self.setheading(90)
+        self.shapesize(stretch_len=0.5, stretch_wid=4.5)
         self.penup()
 
     def right_racket(self):
-        self.goto(x=280, y=0)
+        self.goto(x=375, y=0)
 
     def left_racket(self):
-        self.goto(x=-280, y=0)
+        self.goto(x=-380, y=0)
 
     def up(self):
-        self.forward(10)
+        if self.ycor() < 370:
+            self.goto(self.xcor(), self.ycor()+15)
 
     def down(self):
-        self.forward(-10)
-
-
-
+        if self.ycor() > -370:
+            self.goto(self.xcor(), self.ycor()-15)
