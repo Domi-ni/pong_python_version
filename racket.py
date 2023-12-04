@@ -2,6 +2,7 @@ from turtle import Turtle
 
 
 class Racket(Turtle):
+
     def __init__(self):
         super().__init__()
         self.shape("square")
@@ -17,8 +18,8 @@ class Racket(Turtle):
 
     def up(self):
         if self.ycor() < 370:
-            self.goto(self.xcor(), self.ycor()+15)
+            self.goto(self.xcor(), self.ycor()+18)
 
     def down(self):
         if self.ycor() > -370:
-            self.goto(self.xcor(), self.ycor()-15)
+            self.goto(self.xcor(), self.ycor()-18)
